@@ -53,7 +53,6 @@ public class GuiController {
             new FileReader().read();
             new FileReader().ReadFromFile();
             TextToGUI();
-            CP.show(ContainerPanel.Menu);
 
             setUIDanish();
         }
@@ -134,7 +133,6 @@ public class GuiController {
             new FileReader().read();
             new FileReader().ReadFromFile();
             TextToGUI();
-            CP.show(ContainerPanel.Menu);
 
             setUIEnglish();
         }
@@ -343,6 +341,8 @@ public class GuiController {
         CP.getUM().addActionListenerInformationOnSights(new InformationOnSights());
 
         CP.getWS().addActionListenerMenu(new Menu());
+        CP.getWS().ChangeLanguageDanish(new ChangeLanguageDanish());
+        CP.getWS().ChangeLanguageEnglish(new ChangeLanguageEnglish());
 
         CP.getInfo().addActionListenerMenu(new Menu());
         CP.getInfo().addActionListenerDepartureTime(new DepartureTime());
